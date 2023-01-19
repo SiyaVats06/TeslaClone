@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Section from './Section'
 import styled from "styled-components"
+
+
+
 const Home = () => {
+
   return (
-    <Container>
+    <Container >
    <Section
     modelname="Model Y"
     detail="Schedule a Demo Drive"
@@ -70,6 +74,8 @@ width:100vw;
 height:100vh;
 background:skyblue;
 color:red;
+
+
 
 
 `
