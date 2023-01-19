@@ -1,14 +1,13 @@
 
 import React from 'react'
 import styled from "styled-components"
-import Header from './Header'
 
-const Section = ({modelname,backgroundImg,leftbtn,rightbtn,detail}) => {
+
+const Section = ({modelname,backgroundImg,leftbtn,rightbtn,detail,id}) => {
+ 
   return (
-    <Wrap backgrnd={backgroundImg}>
-   
-
-      <Buttons>
+    <Wrap backgrnd={backgroundImg} id={id} >
+     <Buttons>
         <Itemname>
           <Itemmodel>{modelname}</Itemmodel>
           <Itemdrive >{detail}</Itemdrive>
@@ -29,10 +28,10 @@ export default Section
 const Wrap = styled.div`
 width:100vw;
 height:100vh;
-background:lightpink;
+
 background-size:cover;
 background-position:center;
-background-image:${props=>props.backgrnd};
+background-image:${props=>`url("${props.backgrnd}")`};
 
 `
 const Buttons = styled.div`

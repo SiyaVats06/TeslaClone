@@ -13,27 +13,27 @@ const Header = () => {
     <Container>
     
         <Icon>
-          <a><img src='images/logo.svg' alt=''></img> </a>
+          <a href='#1'><img src='images/logo.svg' alt=''></img> </a>
         </Icon>
 
         <Menu>
           <Each>
-            <a href='#'>Model S </a>
+            <a href='#1'>Model Y </a>
           </Each>
           <Each>
-            <a href='#'>Model 3</a>
+            <a href='#2'>Model 3</a>
           </Each>
           <Each>
-            <a href='#'>Model X</a>
+            <a href='#3'>Model S</a>
           </Each>
           <Each>
-            <a href='#'>Model Y</a>
+            <a href='#4'>Model X</a>
           </Each>
           <Each>
-            <a href='#'>Solar Roof</a>
+            <a href='#5'>Solar Panels</a>
           </Each>
           <Each>
-            <a href='#'>Solar Panels</a>
+            <a href='#6'>Solar Roof </a>
           </Each>
 
 
@@ -239,6 +239,9 @@ z-index:10;
 font-size:2rem;
 a {
   font-weight:100;
+}
+a:hover{
+  background:hsla(0,0%,0%,.05);
 }
 
 `
