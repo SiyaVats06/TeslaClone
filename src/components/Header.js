@@ -1,16 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 
 const Header = ({ name }) => {
   console.log(name);
+  const [buger, setburger] = useState(true)
   return (
     <Container>
-    <Icon>
-    <a>
-        <img src='images/logo.svg' alt=''></img>
-      </a>
-    </Icon>
-     
+      <Icon>
+        <a><img src='images/logo.svg' alt=''></img> </a>
+      </Icon>
+
       <Menu>
         <Each>
           <a href='#'>Model S </a>
@@ -38,78 +37,76 @@ const Header = ({ name }) => {
 
       </Menu>
       <Right>
-        <Each>
-          <a href=''>Shop</a>
-        </Each>
+        <Each> <a href=''>Shop</a> </Each>
 
-        <Each>
+        <Each><a href=''>Account</a> </Each>
+        
+        <Each onClick={() => setburger(true)}>
 
-          <a href=''>Account</a>
-        </Each>
-        <Each>
           <a href='#'>Menu</a>
+
         </Each>
 
       </Right>
-      <After className='menu__small'>
-      <a href='#'>Menu</a>
-      </After>
+         <After className='menu__small' onClick={() => setburger(true)} >
+              <a href='#'>Menu</a>
+         </After>
 
-      <Menubar className='sideMenu'>
-        <Close className='close-btn'>
-           <button>X</button>
+      <Menubar className='sideMenu' show={buger}>
+        <Close className='close-btn' >
+          <button onClick={() => setburger(false)}>X</button>
         </Close>
         <Allmenu>
-        <AllItems>
-           <EachItem>
+          <AllItems>
+            <EachItem>
               <a href=''>Existing Inventory</a>
-           </EachItem>
-           <EachItem>
-           <a href=''>Used Inventory</a>
             </EachItem>
             <EachItem>
-            <a href=''>Trade-In</a>
+              <a href=''>Used Inventory</a>
             </EachItem>
             <EachItem>
-            <a href=''>Demo Drive</a>
+              <a href=''>Trade-In</a>
             </EachItem>
             <EachItem>
-            <a href=''>Insurence</a>
+              <a href=''>Demo Drive</a>
             </EachItem>
             <EachItem>
-            <a href=''>Cybertruck</a>
+              <a href=''>Insurence</a>
             </EachItem>
             <EachItem>
-            <a href=''>Roadster</a>
+              <a href=''>Cybertruck</a>
             </EachItem>
             <EachItem>
-            <a href=''>Semi</a>
+              <a href=''>Roadster</a>
             </EachItem>
             <EachItem>
-            <a href=''>Charging</a>
+              <a href=''>Semi</a>
             </EachItem>
             <EachItem>
-            <a href=''>Powerwall</a>
+              <a href=''>Charging</a>
             </EachItem>
             <EachItem>
-            <a href=''>Commercial Energy</a>
+              <a href=''>Powerwall</a>
             </EachItem>
             <EachItem>
-            <a href=''>Utlities</a>
+              <a href=''>Commercial Energy</a>
             </EachItem>
             <EachItem>
-            <a href=''>Find Us</a>
+              <a href=''>Utlities</a>
             </EachItem>
             <EachItem>
-            <a href=''>Support</a>
+              <a href=''>Find Us</a>
             </EachItem>
             <EachItem>
-            <a href=''>Investor Relations</a>
+              <a href=''>Support</a>
             </EachItem>
             <EachItem>
-            <a href=''>United States</a>
+              <a href=''>Investor Relations</a>
             </EachItem>
-        </AllItems>
+            <EachItem>
+              <a href=''>United States</a>
+            </EachItem>
+          </AllItems>
         </Allmenu>
       </Menubar>
 
@@ -130,6 +127,7 @@ left:0;
 right:0;
 align-items:center;
 justify-content:space-between;
+z-index:1
 `
 const Menu = styled.div`
 display:flex;
@@ -168,14 +166,14 @@ Each.hover{
   background:blue
 }
 `
-const Icon=styled.div`
+const Icon = styled.div`
 a img{
   width:120px;
   height:20px;
   line-height:2
 }
 `
-const After=styled.div`
+const After = styled.div`
 width:80px;
 height:30px;
 background:hsla(0,0%,0%,.05);
@@ -193,9 +191,9 @@ a {
 }
 
 `
-const Menubar=styled.div`
+const Menubar = styled.div`
 
-width:15%;
+width:250px;
 height:100vh;
 position:fixed;
 top:0;
@@ -205,27 +203,32 @@ padding:5px;
 display:flex;
 flex-direction:column;
 row-gap:2.5rem;
-background:white`
-const Close=styled.div`
+background:white;
+transition:transform 0.5s;
+transform:${props => props.show ? "translateX(0)" : "translateX(100%)"}`
+
+const Close = styled.div`
 text-align:end;
 margin-top:2rem;
-margin-right:2rem
+margin-right:2rem;
+z-index:10;
+
 `
 
 
 
-const EachItem=styled.div`
+const EachItem = styled.div`
 a {
   font-weight:600px;
 }
 
 `
-const Allmenu=styled.div`
+const Allmenu = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;`
 
-const AllItems=styled.div`
+const AllItems = styled.div`
 display:flex;
 flex-direction:column;
 row-gap:1rem;
