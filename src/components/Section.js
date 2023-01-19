@@ -5,7 +5,7 @@ import Header from './Header'
 
 const Section = ({modelname,backgroundImg,leftbtn,rightbtn,detail}) => {
   return (
-    <Wrap style={{backgroundImage:`url(${backgroundImg})`}}>
+    <Wrap backgrnd={backgroundImg}>
    
 
       <Buttons>
@@ -32,6 +32,7 @@ height:100vh;
 background:lightpink;
 background-size:cover;
 background-position:center;
+background-image:${props=>props.backgrnd};
 
 `
 const Buttons = styled.div`
