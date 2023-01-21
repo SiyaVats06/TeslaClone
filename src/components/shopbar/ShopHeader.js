@@ -146,6 +146,10 @@ font-weight:500;
 
 @media screen and (width<=1200px){
   display:block;
+    display:flex;
+justify-content:center;
+align-items:center;
+
 }
 `
 
