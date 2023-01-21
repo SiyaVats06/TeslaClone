@@ -1,6 +1,7 @@
 
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Section = ({modelname,backgroundImg,leftbtn,rightbtn,detail,id}) => {
  
@@ -14,13 +15,15 @@ const Section = ({modelname,backgroundImg,leftbtn,rightbtn,detail,id}) => {
         </Itemname>
     
         <Itembuttons>
-       
-        <Leftbtn>
+       <Link to="/shop">
+       <Leftbtn>
             <div>{leftbtn}</div>
           </Leftbtn>
+       </Link>
+       
    
          
-        { rightbtn && <Rightbtn><div>{rightbtn}</div></Rightbtn> }
+        { rightbtn && <Link to="/account"><Rightbtn><div>{rightbtn}</div></Rightbtn></Link> }
         </Itembuttons>
       </Buttons>
     </Wrap>

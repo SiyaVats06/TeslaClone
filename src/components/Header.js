@@ -68,55 +68,55 @@ const Header = () => {
           <Allmenu>
             <AllItems>
             <EachItem>
-                <a href='/shop'>Shop</a>
+               <Link to="/shop">Shop</Link>
               </EachItem>
               <EachItem>
-                <a href='/account'>Account</a>
+              <Link to="/account">Account</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Existing Inventory</a>
+              <Link to="/shop">Existing Inventory</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Used Inventory</a>
+              <Link to="/shop">Used Inventory</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Trade-In</a>
+              <Link to="/shop">Demo Drive</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Demo Drive</a>
+                <a href='/shop'>Trade-In</a>
               </EachItem>
               <EachItem>
-                <a href=''>Insurence</a>
+              <Link to="/account">Insurence</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Cybertruck</a>
+              <Link to="/account">Cybertruck</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Roadster</a>
+              <Link to="/account">Roadster</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Semi</a>
+              <Link to="/shop">Semi</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Charging</a>
+              <Link to="/shop">Charging</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Powerwall</a>
+              <Link to="/shop">Powershell</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Commercial Energy</a>
+              <Link to="/shop">Commercial Energy</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Utlities</a>
+              <Link to="/account">Utilities</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Find Us</a>
+              <Link to="/account">Find Us</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Support</a>
+              <Link to="/account">Support</Link>
               </EachItem>
               <EachItem>
-                <a href=''>Investor Relations</a>
+              <Link to="/account">Investor Relations</Link>
               </EachItem>
               <EachItem>
                  <Contry>
