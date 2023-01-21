@@ -212,9 +212,6 @@ height:30px;
 background:hsla(0,0%,0%,.05);
 color:black;
 display:none;
-display:flex;
-justify-content:center;
-align-items:center;
 
 font-weight:500;
 
