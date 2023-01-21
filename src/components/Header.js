@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -43,9 +44,9 @@ const Header = () => {
 
         </Menu>
         <Right>
-          <Each> <a href=''>Shop</a> </Each>
+          <Each> <Link to="/shop">Shop</Link> </Each>
 
-          <Each><a href=''>Account</a> </Each>
+          <Each><Link to="/account">Acoount</Link> </Each>
 
           <Each onClick={() => setburger(true)}>
 
@@ -54,8 +55,10 @@ const Header = () => {
           </Each>
 
         </Right>
-        <After className='menu__small' onClick={() => setburger(true)} >
+        <After  onClick={() => setburger(true)} >
+          <MENU>
           <a href='#'>Menu</a>
+          </MENU>
         </After>
 
         <Menubar className='sideMenu' show={burger}>
@@ -64,6 +67,12 @@ const Header = () => {
           </Close>
           <Allmenu>
             <AllItems>
+            <EachItem>
+                <a href='/shop'>Shop</a>
+              </EachItem>
+              <EachItem>
+                <a href='/account'>Account</a>
+              </EachItem>
               <EachItem>
                 <a href=''>Existing Inventory</a>
               </EachItem>
@@ -203,18 +212,18 @@ height:30px;
 background:hsla(0,0%,0%,.05);
 color:black;
 display:none;
-text-align:center;
 
-align-item:center;
 font-weight:500;
-a {
-  margin-top:auto;
-}
+
 @media screen and (width<=1200px){
-  display:inline-block;
+  display:block;
 }
 
 `
+const MENU=styled.div``
+
+
+
 const Menubar = styled.div`
 
 width:250px;

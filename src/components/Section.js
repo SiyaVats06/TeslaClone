@@ -1,22 +1,26 @@
 
 import React from 'react'
-import styled from "styled-components"
-
+import styled from 'styled-components'
 
 const Section = ({modelname,backgroundImg,leftbtn,rightbtn,detail,id}) => {
  
   return (
     <Wrap backgrnd={backgroundImg} id={id} >
      <Buttons>
+    
         <Itemname>
           <Itemmodel>{modelname}</Itemmodel>
           <Itemdrive >{detail}</Itemdrive>
         </Itemname>
+    
         <Itembuttons>
-          <Leftbtn>
+       
+        <Leftbtn>
             <div>{leftbtn}</div>
           </Leftbtn>
-        { rightbtn &&  <Rightbtn><div>{rightbtn}</div></Rightbtn>}
+   
+         
+        { rightbtn && <Rightbtn><div>{rightbtn}</div></Rightbtn> }
         </Itembuttons>
       </Buttons>
     </Wrap>
@@ -44,12 +48,14 @@ justify-content:space-between
 const Itemname = styled.div`
 display:flex;
 flex-direction:column;
-margin-top:5rem
+margin-top:5rem;
+
 `
 const Itemmodel=styled.div`
 color:black;
 font-size:2.5rem;
-font-weight:600
+font-weight:600;
+
 `
 
 
