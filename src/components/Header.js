@@ -46,7 +46,7 @@ const Header = () => {
         <Right>
           <Each> <Link to="/shop">Shop</Link> </Each>
 
-          <Each><Link to="/account">Acoount</Link> </Each>
+          <Each><Link to="/account">Account</Link> </Each>
 
           <Each onClick={() => setburger(true)}>
 
